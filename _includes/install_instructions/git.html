@@ -37,27 +37,57 @@ the text below accordingly.
           install (see the
           <a href="#shell">Shell installation instructions</a>).
         </p>
+        <p> Proceed to install <a href="https://cli.github.com/">Github CLI</a> by downloading the installer. </p>
       </article>
       <article role="tabpanel" class="tab-pane" id="git-macos">
-        <p>
-          <strong>For macOS</strong>, install Git for Mac
-          by downloading and running the most recent "mavericks" installer from
-          <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-          Because this installer is not signed by the developer, you may have to
-          right click (control click) on the .pkg file, click Open, and click
-          Open on the pop up window.
-          After installing Git, there will not be anything in your <code>/Applications</code> folder,
-          as Git is a command line program.
-          <strong>For older versions of OS X (10.5-10.8)</strong> use the
-          most recent available installer labelled "snow-leopard"
-          <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
-        </p>
-        <h4>Video Tutorial</h4>
-        <div class="yt-wrapper2">
-        <div class="yt-wrapper">
-          <iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
-        </div>
-        </div>
+          <p>
+              <strong>For macOS</strong>, install Git for Mac
+              through Xcode.
+            <ol class="org-ol">
+                <li>Open a terminal window</li>
+                <li><p>
+                    Type
+                </p>
+                <div class="org-src-container">
+                    <pre class="src src-bash">git --version
+                    </pre>
+                </div>
+                </li>
+                <ul class="org-ul">
+                    <li>If you do not have git, it will automatically asks you whether you
+                        want to install Xcode. Confirm the installation and you will get
+                        git installed.</li>
+                    <li>If you have git, then it should display the version of git you've got
+                        installed.</li>
+                </ul>
+            </ol>
+          </p>
+            <p>
+                The version provided by Apple may be a few versions behind, but that's not
+                a problem for this course if it's newer than version 2.28. If you need or
+                want to obtain a newer version, then <a href="https://www.atlassian.com/git/tutorials/install-git">install git with a different method</a>.
+            </p>
+
+            <p> Once you've installed git, proceed to install <a href="https://cli.github.com/">Github CLI</a>.
+                The easiest way is through <a href="https://brew.sh/">homebrew</a>. First you need to install homebrew:
+                <ol>
+                    <li>Open a terminal window</li>
+                    <li><p> Type </p>
+                        <div class="org-src-container">
+                            <pre class="src src-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                            </pre>
+                        </div>
+                        <p> Follow the installation prompts </p>
+                    </li>
+                    <li><p> Once homebrew is installed, you can then install Github's CLI</p>
+                        <div class="org-src-container">
+                            <pre class="src src-bash">brew install gh
+                            </pre>
+                        </div>
+                    </li>
+                </ol>
+            </p>
+
       </article>
       <article role="tabpanel" class="tab-pane" id="git-linux">
         <p>
@@ -66,6 +96,7 @@ the text below accordingly.
           <code>sudo apt-get install git</code> and for Fedora run
           <code>sudo dnf install git</code>.
         </p>
+        <p> Then proceed to install <a href="https://github.com/cli/cli#linux--bsd">Github's CLI following the option according to your distribution.</p>
       </article>
     </div>
   </div>
